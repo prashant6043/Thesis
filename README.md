@@ -1,2 +1,2 @@
-# neuroevolution_sample
+# neuroevolution
 A sample code for neuroevolution
