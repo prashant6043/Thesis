@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NeuroEvolution</title>
+
+    <!--this file creates dummy functions to resolve linting error-->
+<!--    <script src="js/init.js"></script>-->
+<!--ui library-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+
+    <!--tensorflow library-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.4/dist/tf.min.js"></script>
+
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="modal" id="modal">
+        <div class="row">
+            <input type="number" value="10" id="population" placeholder="Enter population" required>
+            <select name="crossOverMethod" class="float-right" id="crossOverMethod" required>
+                <option value="">Choose a Crossover Method</option>
+                <option value="singlePointCrossOver">Single Point Crossover</option>
+                <option value="twoPointCrossOver">Two-Point Crossover</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <select name="selectionMethod" id="selectionMethod" required>
+                <option value="">Choose a Selection Method</option>
+                <option value="rouletteWheelSelection">Roulette Wheel Selection</option>
+                <option value="tournamentSelection">Tournament Selection</option>
+                <option value="rankSelection">Rank Selection</option>
+            </select>
+
+            <input
+                    type="number"
+                    class="float-right"
+                    id="mutationRate"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0.1"
+                    placeholder="Enter Mutation Rate"
+                    required
+            />
+        </div>
+
+        <div class="row">
+            <button onclick="start()">Start</button>
+        </div>
+    </div>
+
+    <!--helpers-->
+    <script src="js/vectors.js"></script>
+    <script src="js/entity.js"></script>
+    <script src="js/utils.js"></script>
+
+    <!--the UI objects-->
+    <script src="js/bar.js"></script>
+    <script src="js/agent.js"></script>
+
+    <!--the neural network-->
+    <script src="js/neuralNetwork.js"></script>
+
+    <!--the genetic Algorithm-->
+    <script src="js/geneticAlgorithm.js"></script>
+
+    <!--the entry point-->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

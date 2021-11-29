@@ -1,0 +1,19 @@
+I made use of p5js for the User interface design, this comprises of the canvas, robot image and so on.
+I created an html file called index.html where I linked all my stylesheet files and javascript files.
+I created multiple javascript files.
+agent.js - holds the class that represents the robot
+bar.js - contains the class that represents the BAR
+entity.js - contains an abstract class that agent and bar inherit from
+geneticAlgorithm.js - contains the functions pertaining to the genetic algorithm make up
+main.js - this is the main javascript file that executes the game
+utils.js - contains helper functions for main.js
+neuralNetwork.js - contains the class that builds and simulate the neuralNetwork
+vector.js - contains the base class for all vectors such as velocity, acceleration and so on
+
+
+the first function to execute is the setup() which is where the initial assets of the Ui are embedded
+the next function that executes continuously is the draw() this contains the logic that creates bars,
+run agents, update the position of agents and bars, checks for collisions and so on
+
+the neural network holds the model that predictions.
+the Agent class contains the logic that helps the agent know how to move.
